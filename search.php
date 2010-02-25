@@ -22,8 +22,6 @@
   if (isset($_POST['search']))
   {
   	$searchterm = $_POST['search'];
-  	$db = mysqli_connect('localhost', 'assist', 'assist', 'session')
-		or die (mysqli_error());
 
   	if ($searchterm == 'movies')
   	{

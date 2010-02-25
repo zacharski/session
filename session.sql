@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `movies` (
 --
 
 INSERT INTO `movies` (`id`, `movie`, `theater`, `zip`) VALUES
-(1, 'Valentine''s Dat', 'Regal Fredericksburg 15', 22401),
+(1, 'Valentine''s Day', 'Regal Fredericksburg 15', 22401),
 (2, 'Dear John', 'Regal Fredericksburg 15', 22401),
 (3, 'The Wolfman', 'Regal Fredericksburg 15', 22401),
 (4, 'From Paris with Love', 'Marquee Cinemas Southpoint 9', 22401),
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `stores` (
   `address` varchar(30) NOT NULL,
   `zip` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `stores`
@@ -79,4 +79,28 @@ INSERT INTO `stores` (`id`, `name`, `type`, `address`, `zip`) VALUES
 (9, 'Chipotle', 'Mexican restaurant', '5955 Kingstowne', 22401),
 (10, 'El Comedor', 'Mexican restaurant', '2190 Avenida De  Mesilla', 88005),
 (11, 'Los Compas', 'Mexican restaurant', '603 S Nevarez St.', 88005),
-(12, 'La Fuente', 'Mexican restaurant', '1710 S Espina', 88005);
+(12, 'La Fuente', 'Mexican restaurant', '1710 S Espina', 88005),
+(13, 'Peet''s', 'coffee', '2260 Locust', 88005);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(12) NOT NULL,
+  `password` varchar(12) NOT NULL,
+  `zipcode` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `zipcode`) VALUES
+(1, 'raz', 'p00d13', 88005),
+(2, 'ann', 'changeme', 22401),
+(3, 'lazy', 'qwerty', 22401);
