@@ -19,6 +19,7 @@
   </form>
   
   <?php
+  include "db_connect.php";
   if (isset($_POST['search']))
   {
   	$searchterm = $_POST['search'];
