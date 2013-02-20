@@ -10,7 +10,7 @@
 <?php
   include "db_connect.php";
   $name = $_POST['username'];
-  $pw = $_POST['pw'];
+  $pw = $_POST['pw']; # comment
 
    $query = "select * from users WHERE username = '$name' AND password = '$pw'";
    $result = mysqli_query($db, $query);
